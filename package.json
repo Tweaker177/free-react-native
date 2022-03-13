@@ -1,24 +1,31 @@
 {
-  "name": "free-react-native",
-  "description": "Convert your react native app for jailbroken ios development",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "xcode": "^2.0.0"
-  },
-  "bin": {
-    "free-react-native": "./index.js"
-  },
-  "keywords": [
-    "jailbreak",
-    "ios",
-    "sandbox",
-    "cydia"
-  ],
-  "author": "Jimmy Laurent",
+  "name": "theos",
+  "version": "2.5.0",
+  "description": "A cross-platform build system for creating iOS, macOS, Linux, and Windows programs.",
+  "author": "Theos",
+  "license": "GPL-3.0",
+  "homepage": "https://theos.github.io/",
+  "bugs": "https://github.com/theos/theos/issues",
+
   "repository": {
     "type": "git",
-    "url": "git://github.com/JimmyLaurent/free-react-native.git"
+    "url": "git+https://github.com/theos/theos.git"
+  },
+
+  "keywords": [
+    "build",
+    "ios",
+    "iphone",
+    "mac",
+    "jailbreak",
+    "objc"
+  ],
+
+  "bin": {
+    "logos": "./bin/logos.pl",
+    "logify": "./bin/logify.pl",
+    "nic": "./bin/nic.pl",
+    "nicify": "./bin/nicify.pl",
+    "denicify": "./bin/denicify.pl"
   }
 }

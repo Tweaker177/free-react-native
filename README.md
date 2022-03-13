@@ -1,35 +1,50 @@
-# free-react-native
+nicTemplates
+============
 
-[![npm](https://img.shields.io/npm/dm/free-react-native.svg?maxAge=2592000)](https://npm-stat.com/charts.html?package=free-react-native)
+A set of NIC templates
 
-Tool to setup your react-native project to build deb packages for jailbroken devices.
+# Templates included:
 
-Only works on real jailbroken devices and only on MacOsx.
+- Application (Objective-C and Swift)
+- CLI Tool (Objective-C and Swift)
+- Tweak (empty or with a simple preference switch)
+- Library
+- Framework
+- libactivator listener
+- libactivator event
+- Flipswitch switch
+- Cydget
+- XPC service
+- Notification Center widget (iOS 5/6 and iOS 7+)
 
-## Usage
+Templates planned to be included:
 
-Prerequisites:
-- dpkg => brew install dpkg
-- ldid => brew install ldid
-- terminal-notifier => brew install terminal-notifier
+- ActionMenu extension
+- Couria extension?
 
-Configure ssh keys to easily connect to your iphone => https://gist.github.com/DomiR/8870918
+# Usage:
 
-```bash
-npm i -g free-react-native
-cd your-react-native-project
-free-react-native
-```
+## Interactive
 
-## Overview
+	$ $THEOS/nic.pl
 
-- add script commands to "package.json" to build and deploy,
-- create a "deb/package" folder wich contains the structure of your future deb package, 
-- edit the xcode pbxproj to remove code signing and add a post build script
-- add a post build script ("deb/postBuildScript.sh") to deploy and sign your package with "ldid"
-- add a deploy script ("deb/deploy.sh"), you have to customize it.
+- Select the desired template.
+- Input the values for each query
 
+## Programmatic
 
-## TODO
-- use a real template and replace the package name in scripts and "control" file
-- clean the scripts
+	$ nic.pl -p "package.name" -n "ProjectName" -u "User name" --nic template.nic.tar
+
+# Building:
+
+	$ build.sh
+
+------------
+
+Tweak template is a modified version of the template found in https://github.com/DHowett/theos/tree/master/templates/iphone/tweak.nic.tar.
+
+libactivator listener template is a modified version of https://github.com/rpetrich/libactivator/tree/master/example.
+
+application_swift template is a modified version of https://github.com/theos/theos/tree/master/templates/ios/theos/application.nic.tar
+
+tool_swift template is a modified version of https://github.com/theos/theos/tree/master/templates/ios/theos/tool.nic.tar

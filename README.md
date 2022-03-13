@@ -1,26 +1,17 @@
-nicTemplates
+nicTemplates to be made for React Native develoment and deployment on ios devices 
 ============
 
-A set of NIC templates
+A set of NIC templates that I hope to build on to make a new one that allows for creation of React Native projects directly from theos on a jailbroken iPhone or iPad, or through ssh to one from a computer.  so far they are unmodified from original theos github.
 
 # Templates included:
 
 - Application (Objective-C and Swift)
-- CLI Tool (Objective-C and Swift)
-- Tweak (empty or with a simple preference switch)
-- Library
-- Framework
-- libactivator listener
-- libactivator event
-- Flipswitch switch
-- Cydget
-- XPC service
-- Notification Center widget (iOS 5/6 and iOS 7+)
 
 Templates planned to be included:
 
-- ActionMenu extension
-- Couria extension?
+-React Application
+-React Library
+-React tool
 
 # Usage:
 
@@ -43,7 +34,7 @@ Templates planned to be included:
 
 Tweak template is a modified version of the template found in https://github.com/DHowett/theos/tree/master/templates/iphone/tweak.nic.tar.
 
-libactivator listener template is a modified version of https://github.com/rpetrich/libactivator/tree/master/example.
+libactrivator listener template is a modified version of https://github.com/rpetrich/libactivator/tree/master/example.t
 
 application_swift template is a modified version of https://github.com/theos/theos/tree/master/templates/ios/theos/application.nic.tar
 
